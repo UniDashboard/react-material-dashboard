@@ -13,6 +13,9 @@ import {
 } from '@material-ui/core';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import PeopleIcon from '@material-ui/icons/PeopleOutlined';
+import {
+  TrendingUp as LineIcon
+} from 'react-feather';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const TotalCustomers = ({ className, ...rest }) => {
+const TopVolumeGain = ({ className, ...rest }) => {
   const classes = useStyles();
 
   return (
@@ -52,7 +55,7 @@ const TotalCustomers = ({ className, ...rest }) => {
               gutterBottom
               variant="h6"
             >
-              TOTAL CUSTOMERS
+              TOP VOLUME GAIN
             </Typography>
             <Typography
               color="textPrimary"
@@ -63,7 +66,7 @@ const TotalCustomers = ({ className, ...rest }) => {
           </Grid>
           <Grid item>
             <Avatar className={classes.avatar}>
-              <PeopleIcon />
+              <LineIcon />
             </Avatar>
           </Grid>
         </Grid>
@@ -83,7 +86,7 @@ const TotalCustomers = ({ className, ...rest }) => {
             color="textSecondary"
             variant="caption"
           >
-            Since last month
+            Since last 24 hrs.
           </Typography>
         </Box>
       </CardContent>
@@ -91,8 +94,8 @@ const TotalCustomers = ({ className, ...rest }) => {
   );
 };
 
-TotalCustomers.propTypes = {
+TopVolumeGain.propTypes = {
   className: PropTypes.string
 };
 
-export default TotalCustomers;
+export default TopVolumeGain;

@@ -11,28 +11,30 @@ import {
   colors,
   makeStyles
 } from '@material-ui/core';
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import MoneyIcon from '@material-ui/icons/Money';
+import {
+  TrendingUp as LineIcon
+} from 'react-feather';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100%'
   },
-  avatar: {
-    backgroundColor: colors.red[600],
+  green: {
+    backgroundColor: colors.green[600],
     height: 56,
     width: 56
   },
   differenceIcon: {
-    color: colors.red[900]
+    color: colors.green[900]
   },
   differenceValue: {
-    color: colors.red[900],
+    color: colors.green[900],
     marginRight: theme.spacing(1)
   }
 }));
 
-const Budget = ({ className, ...rest }) => {
+const TopLiquidityGain = ({ className, ...rest }) => {
   const classes = useStyles();
 
   return (
@@ -52,7 +54,7 @@ const Budget = ({ className, ...rest }) => {
               gutterBottom
               variant="h6"
             >
-              BUDGET
+              TOP LIQUIDITY GAIN
             </Typography>
             <Typography
               color="textPrimary"
@@ -62,8 +64,8 @@ const Budget = ({ className, ...rest }) => {
             </Typography>
           </Grid>
           <Grid item>
-            <Avatar className={classes.avatar}>
-              <MoneyIcon />
+            <Avatar className={classes.green}>
+              <LineIcon />
             </Avatar>
           </Grid>
         </Grid>
@@ -72,7 +74,7 @@ const Budget = ({ className, ...rest }) => {
           display="flex"
           alignItems="center"
         >
-          <ArrowDownwardIcon className={classes.differenceIcon} />
+          <ArrowUpwardIcon className={classes.differenceIcon} />
           <Typography
             className={classes.differenceValue}
             variant="body2"
@@ -83,7 +85,7 @@ const Budget = ({ className, ...rest }) => {
             color="textSecondary"
             variant="caption"
           >
-            Since last month
+            Since last 24 hrs.
           </Typography>
         </Box>
       </CardContent>
@@ -91,8 +93,8 @@ const Budget = ({ className, ...rest }) => {
   );
 };
 
-Budget.propTypes = {
+TopLiquidityGain.propTypes = {
   className: PropTypes.string
 };
 
-export default Budget;
+export default TopLiquidityGain;

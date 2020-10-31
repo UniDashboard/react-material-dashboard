@@ -25,10 +25,6 @@ We also have a pro version of this product which bundles even more pages and com
 - [Dashboard Page](https://react-material-dashboard.devias.io/app/dashboard)
 - [Users Page](https://react-material-dashboard.devias.io/app/customers)
 - [Products Page](https://react-material-dashboard.devias.io/app/products)
-- [Register Page](https://react-material-dashboard.devias.io/register)
-- [Login Page](https://react-material-dashboard.devias.io/login)
-- [Account Page](https://react-material-dashboard.devias.io/app/account)
-- [Settings Page](https://react-material-dashboard.devias.io/app/settings)
 
 
 ## Quick start
@@ -42,16 +38,6 @@ We also have a pro version of this product which bundles even more pages and com
 - Start the server: `npm run start` or `yarn start`
 
 - Views are on: `localhost:3000`
-
-## Documentation
-
-The documentation for the React Material Kit is can be found [here](https://material-ui.com?ref=devias-io).
-
-## 🖌 Design Files
-
-👉[Download Sketch file](https://s3.eu-west-2.amazonaws.com/devias/products/react-material-dashboard/react-material-dashboard-free.sketch)
-
-👉[Download Figma file](https://devias.s3.eu-west-2.amazonaws.com/products/react-material-dashboard/react-material-dashboard-free.fig)
 
 ## File Structure
 
@@ -79,34 +65,13 @@ material-react-dashboard
 	├── layouts
 	├── theme
 	├── views
-	│	├── Account
 	│	├── Dashboard
 	│	├── Icons
 	│	├── NotFound
 	│	├── ProductList
-	│	├── Settings
-	│	├── SignIn
-	│	├── SignUp
 	│	├── Typography
 	│	└── UserList
 	├── App.jsx
 	├── index.jsx
 	└── Routes.jsx
 ```
-
-## Resources
-
-- More freebies like this one: <https://devias.io>
-
-## Reporting Issues:
-
-- [Github Issues Page](https://github.com/devias-io/react-material-dashboard/issues?ref=devias-io)
-
-## License
-
-- Licensed under MIT (https://github.com/devias-io/react-material-dashboard/blob/master/LICENSE.md)
-
-## Contact Us
-
-- Email Us: contact@devias.io
-- [Follow us on Instagram](https://www.instagram.com/deviasio/)

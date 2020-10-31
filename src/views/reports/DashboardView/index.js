@@ -5,14 +5,12 @@ import {
   makeStyles
 } from '@material-ui/core';
 import Page from 'src/components/Page';
-import Budget from './Budget';
+import TopLiquidityGain from './TopLiquidityGain';
 import LatestOrders from './LatestOrders';
-import LatestProducts from './LatestProducts';
-import Sales from './Sales';
-import TasksProgress from './TasksProgress';
-import TotalCustomers from './TotalCustomers';
+import TopLiquidityList from './TopLiquidityList';
+import TopTxGain from './TopTxGain';
+import TopVolumeGain from './TopVolumeGain';
 import TotalProfit from './TotalProfit';
-import TrafficByDevice from './TrafficByDevice';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,7 +41,7 @@ const Dashboard = () => {
             xl={3}
             xs={12}
           >
-            <Budget />
+            <TopLiquidityGain />
           </Grid>
           <Grid
             item
@@ -52,7 +50,7 @@ const Dashboard = () => {
             xl={3}
             xs={12}
           >
-            <TotalCustomers />
+            <TopVolumeGain />
           </Grid>
           <Grid
             item
@@ -61,7 +59,7 @@ const Dashboard = () => {
             xl={3}
             xs={12}
           >
-            <TasksProgress />
+            <TopTxGain />
           </Grid>
           <Grid
             item
@@ -74,30 +72,12 @@ const Dashboard = () => {
           </Grid>
           <Grid
             item
-            lg={8}
-            md={12}
-            xl={9}
-            xs={12}
-          >
-            <Sales />
-          </Grid>
-          <Grid
-            item
             lg={4}
             md={6}
             xl={3}
             xs={12}
           >
-            <TrafficByDevice />
-          </Grid>
-          <Grid
-            item
-            lg={4}
-            md={6}
-            xl={3}
-            xs={12}
-          >
-            <LatestProducts />
+            <TopLiquidityList />
           </Grid>
           <Grid
             item

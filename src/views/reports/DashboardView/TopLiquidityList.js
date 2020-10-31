@@ -18,6 +18,7 @@ import {
 } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import routes from '../../../routes';
 
 const data = [
   {
@@ -62,7 +63,7 @@ const useStyles = makeStyles(({
   }
 }));
 
-const LatestProducts = ({ className, ...rest }) => {
+const TopLiquidityList = ({ className, ...rest }) => {
   const classes = useStyles();
   const [products] = useState(data);
 
@@ -73,7 +74,7 @@ const LatestProducts = ({ className, ...rest }) => {
     >
       <CardHeader
         subtitle={`${products.length} in total`}
-        title="Latest Products"
+        title="Top Liquidity Gainers"
       />
       <Divider />
       <List>
@@ -121,8 +122,8 @@ const LatestProducts = ({ className, ...rest }) => {
   );
 };
 
-LatestProducts.propTypes = {
+TopLiquidityList.propTypes = {
   className: PropTypes.string
 };
 
-export default LatestProducts;
+export default TopLiquidityList;

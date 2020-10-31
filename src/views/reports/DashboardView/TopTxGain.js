@@ -7,25 +7,34 @@ import {
   Card,
   CardContent,
   Grid,
-  LinearProgress,
   Typography,
-  makeStyles,
-  colors
+  colors,
+  makeStyles
 } from '@material-ui/core';
-import InsertChartIcon from '@material-ui/icons/InsertChartOutlined';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import {
+  TrendingUp as LineIcon
+} from 'react-feather';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     height: '100%'
   },
   avatar: {
-    backgroundColor: colors.orange[600],
+    backgroundColor: colors.green[600],
     height: 56,
     width: 56
+  },
+  differenceIcon: {
+    color: colors.green[900]
+  },
+  differenceValue: {
+    color: colors.green[900],
+    marginRight: theme.spacing(1)
   }
 }));
 
-const TasksProgress = ({ className, ...rest }) => {
+const TopTxGain = ({ className, ...rest }) => {
   const classes = useStyles();
 
   return (
@@ -45,34 +54,47 @@ const TasksProgress = ({ className, ...rest }) => {
               gutterBottom
               variant="h6"
             >
-              TASKS PROGRESS
+              TOP TX GAIN
             </Typography>
             <Typography
               color="textPrimary"
               variant="h3"
             >
-              75.5%
+              Akropolis
             </Typography>
           </Grid>
           <Grid item>
             <Avatar className={classes.avatar}>
-              <InsertChartIcon />
+              <LineIcon />
             </Avatar>
           </Grid>
         </Grid>
-        <Box mt={3}>
-          <LinearProgress
-            value={75.5}
-            variant="determinate"
-          />
+        <Box
+          mt={2}
+          display="flex"
+          alignItems="center"
+        >
+          <ArrowUpwardIcon className={classes.differenceIcon} />
+          <Typography
+            className={classes.differenceValue}
+            variant="body2"
+          >
+            16%
+          </Typography>
+          <Typography
+            color="textSecondary"
+            variant="caption"
+          >
+            Since last 24 hrs.
+          </Typography>
         </Box>
       </CardContent>
     </Card>
   );
 };
 
-TasksProgress.propTypes = {
+TopTxGain.propTypes = {
   className: PropTypes.string
 };
 
-export default TasksProgress;
+export default TopTxGain;

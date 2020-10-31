@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   Box,
@@ -15,6 +15,7 @@ import {
   DollarSign as DollarIcon
 } from 'react-feather';
 import NavItem from './NavItem';
+import Logo from '../../../components/Logo';
 
 const items = [
   {
@@ -98,6 +99,9 @@ const NavBar = ({ onMobileClose, openMobile }) => {
           open={openMobile}
           variant="temporary"
         >
+          <RouterLink to="/">
+            <Logo />
+          </RouterLink>
           {content}
         </Drawer>
       </Hidden>
@@ -108,6 +112,9 @@ const NavBar = ({ onMobileClose, openMobile }) => {
           open
           variant="persistent"
         >
+          <RouterLink to="/">
+            <Logo />
+          </RouterLink>
           {content}
         </Drawer>
       </Hidden>
