@@ -18,23 +18,23 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const CustomerListView = () => {
+const LiquidityTokenListView = () => {
   const classes = useStyles();
-  const [customers] = useState(data);
+  const [tokens] = useState(data);
 
   return (
     <Page
       className={classes.root}
-      title="Customers"
+      title="Liquidity"
     >
       <Container maxWidth={false}>
         <Toolbar />
         <Box mt={3}>
-          <Results customers={customers} />
+          <Results tokens={tokens} />
         </Box>
       </Container>
     </Page>
   );
 };
 
-export default CustomerListView;
+export default LiquidityTokenListView;
