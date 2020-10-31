@@ -127,10 +127,70 @@ const Results = ({ className, tokens, ...rest }) => {
                       </Box>
                     </TableCell>
                     <TableCell>
-                      {token.liquidityChange}
+                      <Box
+                        display="flex"
+                        alignItems="center"
+                      >
+                        {/* eslint-disable-next-line no-nested-ternary */}
+                        {token.liquidityChange.includes('-')
+                          ? (
+                            <ArrowDownwardIcon
+                              className={classes.negativeIcon}
+                            />
+                          )
+                          : (parseInt(token.liquidityChange, 10) === 0
+                              ? <NeutralIcon />
+                              : (
+                                <ArrowUpwardIcon
+                                  className={classes.positiveIcon}
+                                />
+                              )
+                          )}
+                        <Typography
+                          className={token.liquidityChange.includes('-')
+                            ? classes.negativeValue
+                            : parseInt(token.liquidityChange, 10) === 0
+                              ? null
+                              : classes.positiveValue}
+                          variant="body2"
+                        >
+                          {token.liquidityChange}
+                          %
+                        </Typography>
+                      </Box>
                     </TableCell>
                     <TableCell>
-                      {token.txChange}
+                      <Box
+                        display="flex"
+                        alignItems="center"
+                      >
+                        {/* eslint-disable-next-line no-nested-ternary */}
+                        {token.txChange.includes('-')
+                          ? (
+                            <ArrowDownwardIcon
+                              className={classes.negativeIcon}
+                            />
+                          )
+                          : (parseInt(token.txChange, 10) === 0
+                              ? <NeutralIcon />
+                              : (
+                                <ArrowUpwardIcon
+                                  className={classes.positiveIcon}
+                                />
+                              )
+                          )}
+                        <Typography
+                          className={token.txChange.includes('-')
+                            ? classes.negativeValue
+                            : parseInt(token.txChange, 10) === 0
+                              ? null
+                              : classes.positiveValue}
+                          variant="body2"
+                        >
+                          {token.txChange}
+                          %
+                        </Typography>
+                      </Box>
                     </TableCell>
                   </TableRow>
                 )) : null}
